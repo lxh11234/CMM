@@ -40,7 +40,7 @@ METS_IR = st.number_input("METS_IR:", min_value=0.0, max_value=100.0, value=22.0
 
 
 # Process inputs and make predictions
-feature_values = [Age, eGFR, ACR, PBG, HbAlc, FT4, TSH, METS-IR]
+feature_values = [Age, eGFR, ACR, PBG, HbAlc, FT4, TSH, METS_IR]
 features = np.array([feature_values])
 
 if st.button("Predict"):

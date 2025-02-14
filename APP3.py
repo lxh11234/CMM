@@ -14,7 +14,7 @@ model = joblib.load('stacking_classifier_model.pkl')
 X_test = pd.read_csv('X_test.csv')
 
 # Define feature names from the new dataset
-feature_names = ['Age', 'eGFR', 'ACR', 'PBG', 'HbAlc', 'FT4', 'TSH', 'METS-IR'  
+feature_names = ['Age', 'eGFR', 'ACR', 'PBG', 'HbAlc', 'FT4', 'TSH', 'METS_IR'  
 ]
 
 # Streamlit user interface
@@ -36,7 +36,7 @@ PBG = st.number_input("PBG:", min_value=0, max_value=100, value=8)
 HbAlc = st.number_input("HbAlc:", min_value=0.0, max_value=50.0, value=6.0)
 FT4 = st.number_input("FT4:", min_value=0.0, max_value=100.0, value=6.0)
 TSH = st.number_input("TSH:", min_value=0.0, max_value=100.0, value=6.0)
-METS-IR = st.number_input("METS-IR:", min_value=0.0, max_value=100.0, value=22.0)
+METS_IR = st.number_input("METS_IR:", min_value=0.0, max_value=100.0, value=22.0)
 
 
 # Process inputs and make predictions

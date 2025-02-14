@@ -72,7 +72,7 @@ if st.button("Predict"):
 
     # SHAP Explanation
     st.subheader("SHAP Force Plot Explanation")
-    explainer_shap = shap.KernelExplainer(model)
+    explainer_shap = shap.KernelExplainer(model.predict_proba, X_test)
     shap_values = explainer_shap.shap_values(pd.DataFrame([feature_values], columns=feature_names))
     
     # Display the SHAP force plot for the predicted class
